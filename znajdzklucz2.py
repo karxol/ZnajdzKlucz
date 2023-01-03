@@ -14,14 +14,16 @@ steps = 0
 
 distance_before_move = sqrt((key_x - player_x) ** 2 + (key_y - player_y) ** 2)
 
-print(key_x,key_y)
+"""print(key_x,key_y)"""
+
+print("Znajdz Skarb ! ")
 
 while not player_found_key:
     steps +=1
     print()
     print("Mozesz isc w okreslonym kierunku jako [W/A/S/D]: ")
 
-    move = input("dokond idzies: ")
+    move = input("dokąd idziesz?: ")
     if move == "W":
         player_y += 1
         if player_y > game_height:
@@ -69,7 +71,7 @@ while not player_found_key:
 
 
     if player_x == key_x and player_y == key_y:
-        print("Odnalazłeś klucz GRATULUJE")
+        print("Odnalazłeś skarb GRATULUJE")
         print(f"Wykonałeś {steps} ruchów")
         break
 
